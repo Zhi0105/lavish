@@ -3,17 +3,14 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { NavRoutes } from 'src/routes/NavRoutes'
-import { PostProviders } from './PostProviders'
 import { TanstackProviders } from './TanstackProviders'
 
 export const Providers = () => {
   return (
     <Router>
       <TanstackProviders>
-        <PostProviders>
           <NavRoutes />
           <ToastContainer />  
-        </PostProviders>   
       </TanstackProviders>
     </Router>
   )
