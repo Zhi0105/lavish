@@ -26,7 +26,7 @@ export const Inquire = () => {
     
 
   return (
-    <div className="inquire_main flex min-h-screen flex-col items-center justify-center mx-4">
+    <div className="inquire_main flex min-h-screen bg-gray-100 flex-col items-center justify-center mx-4">
       <section className="bg-gray-50 xs:w-full sm:w-full md:w-4/5 lg:w-1/2 xl:w-1/2 rounded-lg shadow-lg flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0 my-12">
         <Logo height={200} width={200} />        
         <h1 className="mt-5 font-bold text-2xl">Personal Information</h1>
