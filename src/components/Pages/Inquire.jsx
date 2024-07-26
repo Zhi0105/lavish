@@ -1,10 +1,12 @@
+import { useContext } from "react";
+import { MailContext } from "src/contexts/MailContext";
 import { Controller, useForm } from "react-hook-form";
 import { BiSend } from 'react-icons/bi'
 import { Logo } from "../Lazy/LazyImage";
 // import { toast } from "react-toastify";
 
 export const Inquire = () => {
-
+  const { send, sendLoading } = useContext(MailContext)
   const {
     handleSubmit,
     control,
@@ -22,6 +24,7 @@ export const Inquire = () => {
 
   const onSubmit = (data) => {
     console.log(data)
+    send(data)
   }
     
 
@@ -151,13 +154,13 @@ export const Inquire = () => {
 
 
             <button 
-              // disabled={registerLoading}
+              disabled={sendLoading}
               onClick={handleSubmit((data) => onSubmit(data))}
               type="button" 
               className="w-full text-gray-900 bg-white flex justify-center items-center gap-4 cursor-pointer hover:bg-gray-300 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-4"
             >
               <BiSend width={50} height={50} />
-              Submit
+              {sendLoading ? 'processing...' : 'submit'}
             </button>
           
           </div>
