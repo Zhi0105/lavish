@@ -3,13 +3,19 @@ import { MailContext } from "src/contexts/MailContext";
 import { Controller, useForm } from "react-hook-form";
 import { BiSend } from 'react-icons/bi'
 import { Logo } from "../Lazy/LazyImage";
-// import { toast } from "react-toastify";
+import { ProductList } from "src/utils/ProductList";
+import { DropDown } from "../Select";
+import PhoneInput from "react-phone-input-2";
+import { isValidPhoneNumber } from 'libphonenumber-js';
+import { toast } from "react-toastify"
+import 'react-phone-input-2/lib/style.css'
 
 export const Inquire = () => {
   const { send, sendLoading } = useContext(MailContext)
   const {
     handleSubmit,
     control,
+    setValue,
     formState : { errors }
   } = useForm({
     defaultValues: {
@@ -23,10 +29,27 @@ export const Inquire = () => {
   });
 
   const onSubmit = (data) => {
-    console.log(data)
-    send(data)
+
+    if(isValidPhoneNumber(`+${data.mobile}`)) {
+      send({
+        name: data.name,
+        address: data.address,
+        mobile: `+${data.mobile}`,
+        email: data.email,
+        service: data.service
+      })
+      setValue("name", "")
+      setValue("address", "")
+      setValue("mobile", "")
+      setValue("email", "")
+      setValue("service", "")
+
+    } else {
+      toast("Invalid phone number", { type: "warning" })
+    }
+
   }
-    
+
 
   return (
     <div className="inquire_main flex min-h-screen bg-gray-100 flex-col items-center justify-center mx-4">
@@ -35,6 +58,78 @@ export const Inquire = () => {
         <h1 className="mt-5 font-bold text-2xl">Personal Information</h1>
         <div className="form_container w-full p-6 space-y-4 md:space-y-6 sm:p-8">
           <div className="form space-y-4 md:space-y-6">
+
+
+            <div className="service_textfield">
+                  <Controller
+                    control={control}
+                    rules={{
+                      required: true,
+                      pattern : /[\S\s]+[\S]+/
+                    }}
+                    render={({ field: { onChange, value } }) => (
+                      // <input 
+                      //   value={value}
+                      //   onChange={onChange}
+                      //   type="service" 
+                      //   name="service" id="service" 
+                      //   placeholder="Service" 
+                      //   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" 
+                      // />
+                      <DropDown 
+                        value={value}
+                        onChange={onChange}
+                        ariaPlaceHolder={"Choose services"}
+                        label={"Product w/ Package"}
+                        required={true}
+                        data={ProductList}
+                      />
+                      
+                    )}
+                    name="service"
+                  />
+                  { errors.service && <p className="text-red-400 indent-2 text-sm">service invalid*</p> }
+            </div>
+
+            <div className="mobile_textfield">
+                <Controller
+                  control={control}
+                  rules={{
+                    required: true,
+                    pattern : /[\S\s]+[\S]+/
+                  }}
+                  render={({ field: { onChange, value } }) => (
+                    // <input 
+                    //   value={value}
+                    //   onChange={onChange}
+                    //   type="mobile" 
+                    //   name="mobile" id="mobile" 
+                    //   placeholder="Mobile number" 
+                    //   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" 
+                    // />
+
+                    <PhoneInput
+                      containerClass="w-full"
+                      onlyCountries={['ph']}
+                      placeholder="Mobile number"
+                      country={'ph'}
+                      value={value}
+                      onChange={onChange}
+                      inputStyle={{ width: '100%' }}
+                      inputProps={{
+                        name: 'phone',
+                        required: true,
+                        autoFocus: true
+                      }}     
+                    />
+                    
+                  )}
+                  name="mobile"
+                />
+                { errors.mobile && <p className="text-red-400 indent-2 text-sm">mobile invalid*</p> }
+
+            </div>
+
             <div className="name_textfield">
                 <Controller
                   control={control}
@@ -83,30 +178,6 @@ export const Inquire = () => {
 
             </div>
 
-            <div className="mobile_textfield">
-                <Controller
-                  control={control}
-                  rules={{
-                    required: true,
-                    pattern : /[\S\s]+[\S]+/
-                  }}
-                  render={({ field: { onChange, value } }) => (
-                    <input 
-                      value={value}
-                      onChange={onChange}
-                      type="mobile" 
-                      name="mobile" id="mobile" 
-                      placeholder="Mobile number" 
-                      className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" 
-                    />
-                    
-                  )}
-                  name="mobile"
-                />
-                { errors.mobile && <p className="text-red-400 indent-2 text-sm">mobile invalid*</p> }
-
-            </div>
-
             <div className="email_textfield">
               <Controller 
                 control={control}
@@ -128,30 +199,6 @@ export const Inquire = () => {
               />
                   { errors.email && <p className="text-red-400 indent-2 text-sm">email invalid*</p> }
             </div>
-
-            <div className="service_textfield">
-                <Controller
-                  control={control}
-                  rules={{
-                    required: true,
-                    pattern : /[\S\s]+[\S]+/
-                  }}
-                  render={({ field: { onChange, value } }) => (
-                    <input 
-                      value={value}
-                      onChange={onChange}
-                      type="service" 
-                      name="service" id="service" 
-                      placeholder="Service" 
-                      className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" 
-                    />
-                    
-                  )}
-                  name="service"
-                />
-                { errors.service && <p className="text-red-400 indent-2 text-sm">service invalid*</p> }
-            </div>
-
 
             <button 
               disabled={sendLoading}
