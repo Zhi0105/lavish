@@ -25,11 +25,6 @@ export const ProductList = [
     description: 'cleaning+choice of nail shape	upgrade design: P50/nail' 
   },
   {
-    id: 5,
-    name: 'Lavish Nail Extensions',
-    description: 'cleaning+choice of nail shape	upgrade design: P50/nail' 
-  },
-  {
     id: 6,
     name: 'Lavish Paraffin Wax',
     description: 'with cleaning' 
@@ -44,65 +39,141 @@ export const ProductList = [
     name: 'Full Lavish Pamper Essential',
     description: 'cleaning+foot spa+mani+pedi(Gel polish) whitening half leg mask	(soak,buff,rinse,oil & lotion, 10mins massage)' 
   },
+
   {
     id: 9,
+    name: 'Regular Cleaning Manicure',
+  },
+
+  {
+    id: 10,
+    name: 'Regular Cleaning Pedicure',
+  },
+
+  {
+    id: 11,
     name: 'Regular Nail Polish  Manicure',
     description: '(with cleaning)' 
   },
   {
-    id: 10,
+    id: 12,
     name: 'Regular Nail Polish  Pedicure',
     description: '(with cleaning)' 
   },
   {
-    id: 11,
+    id: 13,
     name: 'Gel Manicure',
     description: '(regular gel with cleaning)' 
   },
   {
-    id: 12,
+    id: 14,
     name: 'Gel Pedicure',
     description: '(regular gel with cleaning)' 
   },
   {
-    id: 13,
+    id: 15,
     name: 'FootSpa with scrub',
   },
   {
-    id: 14,
+    id: 16,
     name: 'Hand Massage',
   },
   {
-    id: 15,
+    id: 17,
     name: 'Paraffin wax',
   },
   {
-    id: 16,
+    id: 18,
     name: 'Nail Extension',
+  },
+
+  {
+    id: 19,
+    name: 'Foot Reflex',
   },
   
   {
-    id: 17,
+    id: 20,
     name: 'Natural Wink',
     description: '(classic)' 
   },
   {
-    id: 18,
+    id: 21,
     name: 'Dark Wink',
     description: '(MASCARA EFFECT)'
   },
   {
-    id: 19,
+    id: 22,
     name: 'Cat-Eye',
   },
   {
-    id: 20,
+    id: 23,
     name: 'Spiked Wink',
     description: '(mega volume)'
   },
   {
-    id: 21,
+    id: 24,
     name: 'Lash Removal',
     description: '(from other salon)'
   },
+
+  {
+    id: 25,
+    name: 'Lavish Enhanced Full Color',
+    description: 'full color with treatment & haircut'
+  },
+
+  {
+    id: 26,
+    name: 'Lavish Enhanced Full color with Keratin',
+  },
+
+  {
+    id: 27,
+    name: 'Lavish Refined Full Color',
+    description: 'deluxe color with treatment & haircut'
+  },
+
+  {
+    id: 28,
+    name: 'Lavish Refined Full Color w/ Keratin',
+  },
+  {
+    id: 29,
+    name: 'Lavish Enhanced Rebond',
+    description: 'realign hair structure for a straight and manageable style(with treatment & haircut)	'
+  },
+  {
+    id: 30,
+    name: 'Lavish Refined Rebond',
+    description: 'deluxe medicine with treatment & haircut'
+  },
+  {
+    id: 31,
+    name: 'Hair color',
+  },
+  {
+    id: 32,
+    name: 'Balayage',
+  },
+  {
+    id: 33,
+    name: 'Keratin Treatment/Botox',
+  },
+  {
+    id: 34,
+    name: 'Enhanced Rebond',
+  },
+  {
+    id: 35,
+    name: 'Deluxe Rebond',
+  },
+  {
+    id: 36,
+    name: 'Hair Spa',
+  },
+  {
+    id: 37,
+    name: 'Haircut',
+  },  
 ]
