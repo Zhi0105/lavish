@@ -2,27 +2,27 @@ export const ProductList = [
   {
     id: 1,
     name: 'Lavish Routine FootSpa',
-    description: 'cleaning+Regular Pedi Polish whitening half leg mask	(soak,buff,rinse,oil & lotion, 10mins massage)' 
+    description: 'cleaning + Regular Pedi Polish + whitening half leg mask	(soak,buff,rinse,oil & lotion, 10min. Massage)' 
   },
   {
     id: 2,
     name: 'Lavish Routine HandSpa',
-    description: 'cleaning+Regular Polish whitening mask soak,buff,rinse,oil & lotion, 10mins massage)' 
+    description: 'cleaning + Regular Polish whitening mask soak,buff,rinse,oil & lotion, 10min. Massage)' 
   },
   {
     id: 3,
     name: 'Lavish Gel FootSpa',
-    description: ' Cleaning + Pedi Gel Polish	whitening half leg mask	(soak,buff,rinse,oil & lotion, 10mins massage)' 
+    description: ' Cleaning + Pedi Gel Polish +	whitening half leg mask	(soak,buff,rinse,oil & lotion, 10min. Massage)' 
   },
   {
     id: 4,
     name: 'Lavish Gel HandSpa',
-    description: 'cleaning+ Mani Gel Polish	whitening mask (soak,buff,rinse,oil & lotion, 10mins massage)' 
+    description: 'cleaning + Mani Gel Polish + whitening mask (soak,buff,rinse,oil & lotion, 10min. Massage)' 
   },
   {
     id: 5,
     name: 'Lavish Nail Extensions',
-    description: 'cleaning+choice of nail shape	upgrade design: P50/nail' 
+    description: 'cleaning + choice of nail shape	upgrade design: P50/nail' 
   },
   {
     id: 6,
@@ -32,12 +32,12 @@ export const ProductList = [
   {
     id: 7,
     name: 'Full Lavish Pamper Routine',
-    description: 'cleaning+foot spa+mani+pedi(regular polish)	whitening half leg mask	(soak,buff,rinse,oil & lotion, 10mins massage) with cleaning' 
+    description: 'cleaning + foot spa + mani+pedi(regular polish) +	whitening half leg mask	(soak,buff,rinse,oil & lotion, 10min. Massage) with cleaning' 
   },
   {
     id: 8,
     name: 'Full Lavish Pamper Essential',
-    description: 'cleaning+foot spa+mani+pedi(Gel polish) whitening half leg mask	(soak,buff,rinse,oil & lotion, 10mins massage)' 
+    description: 'cleaning + foot spa + mani+pedi(Gel polish) + whitening half leg mask	(soak,buff,rinse,oil & lotion, 10min. Massage)' 
   },
 
   {
