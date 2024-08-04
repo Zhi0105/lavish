@@ -6,7 +6,8 @@ export const sendEmail = (payload) => {
     address: payload.address,
     mobile: payload.mobile,
     email: payload.email,
-    service: payload.service
+    service: payload.service,
+    tor: payload.tor
   }
 
   const result = apiClient.post('/mailer/send', params).then(res => {

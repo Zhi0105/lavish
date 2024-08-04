@@ -5,15 +5,18 @@ import 'react-toastify/dist/ReactToastify.css'
 import { NavRoutes } from 'src/routes/NavRoutes'
 import { TanstackProviders } from './TanstackProviders'
 import { MailProviders } from './MailProviders'
+import { DateProviders } from './DateProviders'
 
 export const Providers = () => {
   return (
     <Router>
       <TanstackProviders>
-        <MailProviders>
-          <NavRoutes />
-          <ToastContainer />
-        </MailProviders> 
+        <DateProviders>
+          <MailProviders>
+            <NavRoutes />
+            <ToastContainer />
+          </MailProviders>
+        </DateProviders> 
       </TanstackProviders>
     </Router>
   )

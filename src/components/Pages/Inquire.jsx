@@ -7,6 +7,7 @@ import { ProductList } from "src/utils/ProductList";
 import { DropDown } from "../Select";
 import PhoneInput from "react-phone-input-2";
 import { isValidPhoneNumber } from 'libphonenumber-js';
+import { DateTimePicker } from "@mui/x-date-pickers";
 import { toast } from "react-toastify"
 import 'react-phone-input-2/lib/style.css'
 
@@ -23,31 +24,31 @@ export const Inquire = () => {
       address: '',
       mobile: '',
       email: '',
-      service: ''
-
+      service: '',
+      tor: null
     },
   });
 
   const onSubmit = (data) => {
-
     if(isValidPhoneNumber(`+${data.mobile}`)) {
       send({
         name: data.name,
         address: data.address,
         mobile: `+${data.mobile}`,
         email: data.email,
-        service: data.service
+        service: data.service,
+        tor: String(data.tor.$d)
       })
       setValue("name", "")
       setValue("address", "")
       setValue("mobile", "")
       setValue("email", "")
       setValue("service", "")
-
+      setValue("tor", null)
+      
     } else {
       toast("Invalid phone number", { type: "warning" })
     }
-
   }
 
 
@@ -99,15 +100,6 @@ export const Inquire = () => {
                     pattern : /[\S\s]+[\S]+/
                   }}
                   render={({ field: { onChange, value } }) => (
-                    // <input 
-                    //   value={value}
-                    //   onChange={onChange}
-                    //   type="mobile" 
-                    //   name="mobile" id="mobile" 
-                    //   placeholder="Mobile number" 
-                    //   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" 
-                    // />
-
                     <PhoneInput
                       containerClass="w-full"
                       onlyCountries={['ph']}
@@ -199,6 +191,26 @@ export const Inquire = () => {
               />
                   { errors.email && <p className="text-red-400 indent-2 text-sm">email invalid*</p> }
             </div>
+
+            <div className="tor_field">
+              <Controller 
+                control={control}
+                rules={{
+                  required: true,
+                }}
+                render={( { field: { onChange, value } }) => (
+                  <DateTimePicker
+                    className="w-full"
+                    label="Time of Reservation"
+                    value={value}
+                    onChange={onChange}
+                  />
+                )}
+                name="tor"
+              />
+                  { errors.tor && <p className="text-red-400 indent-2 text-sm">Time of reservation invalid*</p> }
+            </div>
+
 
             <button 
               disabled={sendLoading}
