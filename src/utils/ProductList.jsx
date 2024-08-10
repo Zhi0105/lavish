@@ -42,138 +42,128 @@ export const ProductList = [
 
   {
     id: 9,
-    name: 'Regular Cleaning Manicure',
-  },
-
-  {
-    id: 10,
-    name: 'Regular Cleaning Pedicure',
-  },
-
-  {
-    id: 11,
     name: 'Regular Nail Polish  Manicure',
     description: '(with cleaning)' 
   },
   {
-    id: 12,
+    id: 10,
     name: 'Regular Nail Polish  Pedicure',
     description: '(with cleaning)' 
   },
   {
-    id: 13,
+    id: 11,
     name: 'Gel Manicure',
     description: '(regular gel with cleaning)' 
   },
   {
-    id: 14,
+    id: 12,
     name: 'Gel Pedicure',
     description: '(regular gel with cleaning)' 
   },
   {
-    id: 15,
+    id: 13,
     name: 'FootSpa with scrub',
   },
   {
-    id: 16,
+    id: 14,
     name: 'Hand Massage',
   },
   {
-    id: 17,
+    id: 15,
     name: 'Paraffin wax',
   },
   {
-    id: 18,
+    id: 16,
     name: 'Nail Extension',
   },
 
   {
-    id: 19,
+    id: 17,
     name: 'Foot Reflex',
   },
   
   {
-    id: 20,
+    id: 18,
     name: 'Natural Wink',
     description: '(classic)' 
   },
   {
-    id: 21,
+    id: 19,
     name: 'Dark Wink',
     description: '(MASCARA EFFECT)'
   },
   {
-    id: 22,
+    id: 20,
     name: 'Cat-Eye',
   },
   {
-    id: 23,
+    id: 21,
     name: 'Spiked Wink',
     description: '(mega volume)'
   },
   {
-    id: 24,
+    id: 22,
     name: 'Lash Removal',
     description: '(from other salon)'
   },
 
   {
-    id: 25,
+    id: 23,
     name: 'Lavish Enhanced Full Color',
     description: 'full color with treatment & haircut'
   },
 
   {
-    id: 26,
+    id: 24,
     name: 'Lavish Enhanced Full color with Keratin',
   },
 
   {
-    id: 27,
+    id: 25,
     name: 'Lavish Refined Full Color',
     description: 'deluxe color with treatment & haircut'
   },
 
   {
-    id: 28,
+    id: 26,
     name: 'Lavish Refined Full Color w/ Keratin',
   },
   {
-    id: 29,
+    id: 27,
     name: 'Lavish Enhanced Rebond',
     description: 'realign hair structure for a straight and manageable style(with treatment & haircut)	'
   },
   {
-    id: 30,
+    id: 28,
     name: 'Lavish Refined Rebond',
     description: 'deluxe medicine with treatment & haircut'
   },
   {
-    id: 31,
+    id: 29,
     name: 'Hair color',
   },
   {
-    id: 32,
+    id: 30,
     name: 'Balayage',
   },
   {
-    id: 33,
+    id: 31,
     name: 'Keratin Treatment/Botox',
   },
   {
-    id: 34,
+    id: 32,
     name: 'Enhanced Rebond',
   },
   {
-    id: 35,
+    id: 33,
     name: 'Deluxe Rebond',
   },
   {
-    id: 36,
+    id: 34,
     name: 'Hair Spa',
   },
   {
-    id: 37,
+    id: 35,
     name: 'Haircut',
   },  
 ]
